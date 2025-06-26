@@ -1,0 +1,6 @@
+@Pdc.Autorizador_HostAddress = http://localhost:5135
+
+GET {{Pdc.Autorizador_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
