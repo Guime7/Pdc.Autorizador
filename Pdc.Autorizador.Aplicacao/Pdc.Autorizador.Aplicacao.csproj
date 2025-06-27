@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Sessoes\Queries\" />
+      <ProjectReference Include="..\Pdc.Autorizador.Dominio\Pdc.Autorizador.Dominio.csproj" />
     </ItemGroup>
 
 </Project>

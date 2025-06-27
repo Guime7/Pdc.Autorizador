@@ -1,6 +1,7 @@
 // PDC.Autorizador.Dominio/Agregados/Menu/Funcionalidade.cs
 
 using Pdc.Autorizador.Dominio.Agregados.Menu.ObjetosDeValor;
+using Pdc.Autorizador.Dominio.Agregados.Usuario;
 using Pdc.Autorizador.Dominio.Agregados.Usuario.ObjetosDeValor; // Perfil
 
 namespace Pdc.Autorizador.Dominio.Agregados.Permissao;

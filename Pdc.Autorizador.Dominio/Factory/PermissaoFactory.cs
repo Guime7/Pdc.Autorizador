@@ -3,6 +3,7 @@
 using Pdc.Autorizador.Dominio.Agregados.Menu;
 using Pdc.Autorizador.Dominio.Agregados.Menu.ObjetosDeValor;
 using Pdc.Autorizador.Dominio.Agregados.Permissao;
+using Pdc.Autorizador.Dominio.Agregados.Usuario;
 using Pdc.Autorizador.Dominio.Agregados.Usuario.ObjetosDeValor;
 using Pdc.Autorizador.Dominio.Interfaces.Servico;
 // Para o Perfil

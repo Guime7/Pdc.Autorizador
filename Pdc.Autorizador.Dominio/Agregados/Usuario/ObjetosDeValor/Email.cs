@@ -1,26 +1,27 @@
 using System.Text.RegularExpressions;
+ 
+ namespace Pdc.Autorizador.Dominio.Agregados.Usuario.ObjetosDeValor;
+ public partial record Email
+ {
+     public string Endereco { get; }
+     private Email(string endereco)
+     {
+         Endereco = endereco;
+     }
+     
+     public static Result<Email> Criar(string endereco)
+     {
+         if (string.IsNullOrWhiteSpace(endereco) || !IsValid(endereco))
+             return Result<Email>.Failure(Error.Validation("Validation.EmailInvalido", "O e-mail fornecido não é válido."));
+         
+         return Result<Email>.Success(new Email(endereco));
+     }
 
-namespace Pdc.Autorizador.Dominio.Agregados.Usuario.ObjetosDeValor;
-public record Email
-{
-    public string Endereco { get; }
-
-    public Email(string endereco)
-    {
-        if (string.IsNullOrWhiteSpace(endereco) || !IsValid(endereco))
-        {
-            throw new ArgumentException("Formato de e-mail inválido.", nameof(endereco));
-        }
-        Endereco = endereco;
-    }
-
-    // Validação simples de e-mail
-    private static bool IsValid(string email)
-    {
-        // Uma validação mais robusta pode ser necessária.
-        return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase);
-    }
-
-    // Permite conversão implícita de Email para string
-    public static implicit operator string(Email email) => email.Endereco;
-}
+     private static bool IsValid(string email)
+     {
+         return EmailRegex().IsMatch(email);
+     }
+     
+     [GeneratedRegex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase, "pt-BR")]
+     private static partial Regex EmailRegex();
+ }

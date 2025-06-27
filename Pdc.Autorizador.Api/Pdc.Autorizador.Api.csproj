@@ -16,9 +16,6 @@
       <Folder Include="Api\Endpoint\Carteira\" />
       <Folder Include="Api\Endpoint\PermissoesPorFuncionalidade\" />
       <Folder Include="Api\Endpoint\Permissoes\" />
-      <Folder Include="Application\" />
-      <Folder Include="Domain\" />
-      <Folder Include="Infraestrutura\" />
     </ItemGroup>
 
 </Project>

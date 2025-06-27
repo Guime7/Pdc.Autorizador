@@ -1,0 +1,67 @@
+# Arquivo .gitignore padrão e abrangente para projetos .NET
+# Cobre Visual Studio, VS Code, Rider e artefatos de build.
+
+# Ignora os outputs de build
+[Bb]in/
+[Oo]bj/
+
+# Ignora arquivos gerados pelo Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.nupkg
+*.snupkg
+/packages/
+
+# Ignora arquivos de log e de teste
+*.log
+*.trx
+TestResults/
+coverage.json
+*.coverlet.json
+*.cobertura.xml
+
+# Ignora arquivos de cache e temporários do .NET
+.DS_Store
+.דולרRECYCLE.BIN/
+
+# Ignora diretórios de publicação
+publish/
+**/publish/
+
+# Ignora arquivos de configuração específicos do usuário/ambiente
+# É uma boa prática manter o appsettings.Development.json fora do controle de versão
+# para que cada desenvolvedor possa ter suas próprias configurações locais.
+*.secrets.json
+appsettings.Development.json
+appsettings.*.json
+!appsettings.Template.json
+
+# Arquivos de ambiente
+.env
+
+# Ignora arquivos específicos do VS Code, mas mantém configurações compartilhadas
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Ignora arquivos específicos do Rider (JetBrains)
+.idea/
+*.sln.iml
+
+# Ignora arquivos específicos do sistema operacional
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory

@@ -1,6 +1,7 @@
 namespace Pdc.Autorizador.Dominio.Enums;
 public enum Cargo
 {
+    NãoInformado,
     Trainee,
     Estagiario,
     AnalistaJunior,
@@ -9,6 +10,6 @@ public enum Cargo
     Especialista,
     Coordenador,
     Gerente,
-    Superintedente,
+    Superintendente,
     Diretor
 }
